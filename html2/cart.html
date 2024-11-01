@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購票</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../-js/script.js"></script>
+    <script src="../-js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="../html/index.html">
+                <h2 class="head1"><img src="../jpg/logo.jpg" alt="" weight="70px" height="70px"></h2>
+            </a>
+
+            <ul class="drop-down-menu">
+                <li>
+                    <a class="0">
+                        <img class="place" src="../jpg/icon/place.png">
+                    </a>
+
+                    <br>
+
+                    <ul>
+                        <li>
+                            <a class="1" href="../html/tokyo.html">東京都</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/saitama.html">埼玉縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/shizuoka.html">靜岡縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/hyogo.html">兵庫縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/tottori.html">鳥取縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/kanagawa.html">神奈川縣</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div id="banner" class="banner" onclick="jumpToCart()">
+                <img class="shop" src="../jpg/icon/cart.png">
+            </div>
+
+            <div id="fav" class="fav" onclick="jumpToFavor()">
+                <img class="favor" src="../jpg/icon/favor.png">
+            </div>
+
+        </div>
+
+        <br>
+
+        <br><br>
+
+        <div id="shopping">
+            <div class="item_header">
+                <div class="item_detail">商品</div>
+                <div class="price">單價</div>
+                <div class="count">數量</div>
+                <div class="amount">總計</div>
+                <div class="operate">取消</div>
+            </div>
+        </div>
+
+        <br>
+
+        <script>
+            var total_price = 0; // 總金額
+            var cartDic = JSON.parse(localStorage.getItem("cartStorage")); // 取得購物清單的dictionary
+            for (var key in cartDic) {
+                var arr = key.split(" "); // 將key切成array
+                var museum = arr[0]; // 博物館名稱
+                var ticket = arr[1]; // 票種名稱
+                var price = parseInt(arr[2]); // 該票種價錢
+                var count = parseInt(cartDic[key]); // 該票種數量(存在dictionary的value)
+                var amount = price * count; // 該票種總金額
+                total_price += amount; // 計算全品項總金額
+
+                document.writeln("<div class=\"item_body\">");
+                document.writeln("<div class=\"item_name\">" + museum + "</div>");
+                document.writeln("<div class=\"item_ticket\" id=\"" + key + "t\">" + ticket + "</div>");
+                document.writeln("<div class=\"item_price\"><span>$</span>" + price + "</div>");
+                document.writeln("<div class=\"item_count\">");
+                document.writeln("<button class=\"minus\" value=\"" + key + "\">-</button>");
+                document.writeln("<span id=\"" + key + "s\">" + count + "</span>");
+                document.writeln("<button class=\"plus\" value=\"" + key + "\">+</button>");
+                document.writeln("</div>");
+                document.writeln("<div class=\"item_amount\" id=\"" + key + "a\">" + amount + "</div>");
+                document.writeln(" <div class=\"item_delete\">");
+                document.writeln("<button class=\"cancel\" value=\"" + key + "\">刪除</button>");
+                document.writeln("</div>");
+                document.writeln("</div>");
+            }
+
+            document.writeln("<div class=\"total\">");
+            document.writeln("<div class=\"number\">總金額</div>");
+            document.writeln("<div id=\"total_price\"><span>$</span>" + total_price + "</div>");
+            document.writeln("</div>");
+
+            $(".minus").on("click", function () {
+                var buttonValue = $(this).val();
+                var cartDic = JSON.parse(localStorage.getItem("cartStorage"));
+                if (cartDic[buttonValue] > 1) {
+                    cartDic[buttonValue]--;
+                    document.getElementById(buttonValue + "s").innerHTML = cartDic[buttonValue] + ""; // 改變該票種數量的html程式碼
+                    var arr = buttonValue.split(" ");
+                    var price = parseInt(arr[2]);
+                    var count = cartDic[buttonValue];
+                    var amount = count * price;
+
+                    document.getElementById(buttonValue + "a").innerHTML = amount; // 改變該票種總金額的html程式碼
+
+                    var total_price_html_code = document.getElementById("total_price").innerHTML;
+                    var total_price_html_code_number = total_price_html_code.replace("<span>$</span>", "");
+                    var old_total_price = parseInt(total_price_html_code_number);
+                    var new_total_price = old_total_price - price; // 重新計算全品項總金額
+                    document.getElementById("total_price").innerHTML = "<span>$</span>" + new_total_price; // 改變該全品項總金額的html程式碼
+
+                    localStorage.setItem("cartStorage", JSON.stringify(cartDic)); // 重新儲存dictionary到local storage
+                }
+                else {
+                    var dataArr = buttonValue.split(" ");
+                    var museum = dataArr[0];
+                    var ticket = dataArr[1];
+                    alert("已移除「" + museum + " " + ticket + "」的票。");
+                    delete cartDic[buttonValue]; // 刪除dicrionary中該博物館之該票種
+                    localStorage.setItem("cartStorage", JSON.stringify(cartDic)); // 更新local storage
+                    location.reload(); // 重新整理畫面
+                }
+            });
+
+            $(".plus").on("click", function () {
+                var buttonValue = $(this).val();
+                var cartDic = JSON.parse(localStorage.getItem("cartStorage"));
+                if (cartDic[buttonValue] < 10) {
+                    cartDic[buttonValue]++;
+                    document.getElementById(buttonValue + "s").innerHTML = cartDic[buttonValue] + ""; // 改變該票種數量的html程式碼
+                    var arr = buttonValue.split(" ");
+                    var price = parseInt(arr[2]);
+                    var count = cartDic[buttonValue];
+                    var amount = count * price;
+
+                    document.getElementById(buttonValue + "a").innerHTML = amount; // 改變該票種總金額的html程式碼
+
+                    var total_price_html_code = document.getElementById("total_price").innerHTML;
+                    var total_price_html_code_number = total_price_html_code.replace("<span>$</span>", "");
+                    var old_total_price = parseInt(total_price_html_code_number);
+                    var new_total_price = old_total_price + price; // 重新計算全品項總金額
+                    document.getElementById("total_price").innerHTML = "<span>$</span>" + new_total_price; // 改變該全品項總金額的html程式碼
+
+                    localStorage.setItem("cartStorage", JSON.stringify(cartDic)); // 重新儲存dictionary到local storage
+                }
+                else {
+                    alert("一種票上限10張");
+                }
+            });
+
+            $(".cancel").on("click", function () {
+                var cartDic = JSON.parse(localStorage.getItem("cartStorage"));
+                var buttonValue = $(this).val();
+                var dataArr = buttonValue.split(" ");
+                var museum = dataArr[0];
+                var ticket = dataArr[1];
+                alert("已移除「" + museum + " " + ticket + "」的票。");
+                delete cartDic[buttonValue]; // 刪除dicrionary中該博物館之該票種
+                localStorage.setItem("cartStorage", JSON.stringify(cartDic)); // 更新local storage
+                location.reload(); // 重新整理畫面
+            });
+        </script>
+
+        <br><br><br>
+
+        <br>
+        <br>
+
+        <br><br><br><br><br><br><br>
+
+        <div id="footer">
+            <a href="contact.html">
+                <h2 class="footer1">聯絡我們</h2>
+            </a>
+            <a href="https://www.instagram.com/butterfly_music11018/">
+                <h2 class="footer"><img src="../jpg/insta.png" width="50px" height="50px"></h2>
+            </a>
+            <a href="https://www.facebook.com/butterflymusic11018/">
+                <h2 class="footer"><img src="../jpg/facebook.png" width="50px" height="50px"></h2>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

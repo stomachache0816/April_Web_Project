@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藤子・F・不二雄博物館</title>
+    <link rel="stylesheet" href="../css/museum.css">
+    <script src="../-js/jquery.min.js"></script>
+    <script src="../bootstrap-4/js/bootstrap.min.js"></script>
+    <script src="../-js/script.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="../html/index.html">
+                <h2 class="head1"><img src="../jpg/logo.jpg" alt="" weight="70px" height="70px"></h2>
+            </a>
+
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="#">
+                        <img class="place" src="../jpg/icon/place.png">
+                    </a>
+
+                    <br>
+
+                    <ul>
+                        <li>
+                            <a class="1" href="../html/tokyo.html">東京都</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/saitama.html">埼玉縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/shizuoka.html">靜岡縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/hyogo.html">兵庫縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/tottori.html">鳥取縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/kanagawa.html">神奈川縣</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div id="banner" class="banner" onclick="jumpToCart()">
+                <img class="shop" src="../jpg/icon/cart.png">
+            </div>
+
+            <div id="fav" class="fav" onclick="jumpToFavor()">
+                <img class="favor" src="../jpg/icon/favor.png">
+            </div>
+
+        </div>
+
+        <br>
+
+        <img id="tkpic" src="../jpg/museum/kg1.jpg">
+
+        <h1 class="museum_name">藤子・F・不二雄博物館</h1>
+
+        <div class="about">
+            <h1>About</h1>
+            <p>喜歡哆啦A夢的話，到日本自由行很推薦要來逛藤子不二雄博物館，裡頭展出大量作者手稿，還有哆啦A夢互動遊戲、電影等設施，哆啦A夢博物館當然也少不了好幾組大型的卡通造景可以讓遊客們拍照打卡，重溫兒時回憶吧！</p>
+        </div>
+
+        <div class="infro">
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/location.png">
+                <p>神奈川縣川崎市多摩區長尾2丁目8番1號</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/clock.png">
+                <p>10:00-18:00</p>
+                <p>遊客需在門票上指定的日期及時間段內入場，每天有7個入場批次，分別為10:00、11:00、12:00、13:00、14:00、15:00、16:00</p>
+                <p>公休日: 週二、年底年初</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/train.png">
+                <p>1. 乘坐小田急線及JR南武線在登戶站下車。然後再乘坐穿梭巴士即可到達</p>
+                <p>2. 乘坐小田急線在向丘遊園站下車徒步16分鐘，乘坐JR南武線在宿河原站下車徒步15分鐘</p>
+            </div>
+
+        </div>
+
+        <div class="buy_ticket">
+            <div id="already_buy" class="already_buy"><strong>購票</strong></div>
+        </div>
+
+        <div class="ticket">
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/baby.png" />
+                <div class="ticket_text">3歲以下</div>
+                <div class="ticket_price">0日幣</div>
+                <button class="ticket_shop" id="ticket-byn-1" value="藤子・F・不二雄博物館 3歲以下 0">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/boy.png" />
+                <div class="ticket_text">兒童</div>
+                <div class="ticket_price">500日幣</div>
+                <button class="ticket_shop" id="ticket-byn-2" value="藤子・F・不二雄博物館 兒童 500">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/kid.png" />
+                <div class="ticket_text">中學生和高中生</div>
+                <div class="ticket_price">700日幣</div>
+                <button class="ticket_shop" id="ticket-byn-3" value="藤子・F・不二雄博物館 中學生和高中生 700">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/adult.png" />
+                <div class="ticket_text">高中生以上</div>
+                <div class="ticket_price">1000日幣</div>
+                <button class="ticket_shop" id="ticket-byn-5" value="藤子・F・不二雄博物館 高中生以上 1000">加入購物車</button>
+            </div>
+
+        </div>
+
+        <div class="add_fav">
+            <button class="added" value="藤子・F・不二雄博物館 ../kanagawa/kg1.html">喜歡就收藏</button>
+        </div>
+        <script src="../-js/addButton.js"></script>
+        <br><br>
+
+        <br><br><br><br><br><br>
+
+        <div id="footer">
+            <a href="contact.html">
+                <h2 class="footer1">聯絡我們</h2>
+            </a>
+            <a href="https://www.instagram.com/butterfly_music11018/">
+                <h2 class="footer"><img src="../jpg/insta.png" width="50px" height="50px"></h2>
+            </a>
+            <a href="https://www.facebook.com/butterflymusic11018/">
+                <h2 class="footer"><img src="../jpg/facebook.png" width="50px" height="50px"></h2>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

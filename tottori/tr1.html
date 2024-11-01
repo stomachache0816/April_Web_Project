@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青山剛昌故鄉館</title>
+    <link rel="stylesheet" href="../css/museum.css">
+    <script src="../-js/jquery.min.js"></script>
+    <script src="../bootstrap-4/js/bootstrap.min.js"></script>
+    <script src="../-js/script.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="../html/index.html">
+                <h2 class="head1"><img src="../jpg/logo.jpg" alt="" weight="70px" height="70px"></h2>
+            </a>
+
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="#">
+                        <img class="place" src="../jpg/icon/place.png">
+                    </a>
+
+                    <br>
+
+                    <ul>
+                        <li>
+                            <a class="1" href="../html/tokyo.html">東京都</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/saitama.html">埼玉縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/shizuoka.html">靜岡縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/hyogo.html">兵庫縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/tottori.html">鳥取縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/kanagawa.html">神奈川縣</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div id="banner" class="banner" onclick="jumpToCart()">
+                <img class="shop" src="../jpg/icon/cart.png">
+            </div>
+
+            <div id="fav" class="fav" onclick="jumpToFavor()">
+                <img class="favor" src="../jpg/icon/favor.png">
+            </div>
+
+        </div>
+
+        <br>
+
+        <img id="tkpic" src="../jpg/museum/tr1.jpg">
+
+        <h1 class="museum_name">青山剛昌故鄉館</h1>
+
+        <div class="about">
+            <h1>About</h1>
+            <p>身為柯南愛好者，絕對不能錯過位於鳥取縣的青山剛昌故鄉館。青山剛昌是名偵探柯南的作者，在他的故鄉館內展示了許多青山剛昌兒時回憶的物品、漫畫、插圖和柯南相關作品。在參觀時，可挑戰分為初級、中級、高級、白金級的猜謎競賽，答對者可得到原創的認定證書，是大人小孩都能開心參加的活動。
+            </p>
+        </div>
+
+        <div class="infro">
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/location.png">
+                <p>鳥取縣東伯郡北榮町由良宿1414</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/clock.png">
+                <p>9:30-17:30</p>
+                <p>最後入館時間為閉館前30分</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/train.png">
+                <p>1. 從柯南站（JR由良站）徒歩約20分或搭乘計程車5分鐘 </p>
+                <p>2. 鳥取汽車道　佐用JCT～鳥取IC～鳥取～R９～北榮町由良宿</p>
+                <p>3. 中國汽車道　院庄IC～R179～倉吉～北栄町由良宿</p>
+                <P>4. 從鳥取砂丘柯南機場坐巴士約67分</P>
+            </div>
+
+        </div>
+
+        <div class="buy_ticket">
+            <div id="already_buy" class="already_buy"><strong>購票</strong></div>
+        </div>
+
+        <div class="ticket">
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/boy.png" />
+                <div class="ticket_text">兒童</div>
+                <div class="ticket_price">300日幣</div>
+                <button class="ticket_shop" id="ticket-byn-1" value="青山剛昌故鄉館 兒童 300">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/kid.png" />
+                <div class="ticket_text">中學生和高中生</div>
+                <div class="ticket_price">500日幣</div>
+                <button class="ticket_shop" id="ticket-byn-2" value="青山剛昌故鄉館 中學生和高中生 500">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/adult.png" />
+                <div class="ticket_text">高中生以上</div>
+                <div class="ticket_price">700日幣</div>
+                <button class="ticket_shop" id="ticket-byn-3" value="青山剛昌故鄉館 高中生以上 700">加入購物車</button>
+            </div>
+
+        </div>
+
+        <div class="add_fav">
+            <button class="added" value="青山剛昌故鄉館 ../tottori/tr1.html">喜歡就收藏</button>
+        </div>
+        <script src="../-js/addButton.js"></script>
+        <br><br>
+
+        <br><br><br><br><br><br>
+
+        <div id="footer">
+            <a href="contact.html">
+                <h2 class="footer1">聯絡我們</h2>
+            </a>
+            <a href="https://www.instagram.com/butterfly_music11018/">
+                <h2 class="footer"><img src="../jpg/insta.png" width="50px" height="50px"></h2>
+            </a>
+            <a href="https://www.facebook.com/butterflymusic11018/">
+                <h2 class="footer"><img src="../jpg/facebook.png" width="50px" height="50px"></h2>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

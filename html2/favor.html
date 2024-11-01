@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收藏</title>
+    <link rel="stylesheet" href="../css/favor.css">
+    <script src="../-js/script.js"></script>
+    <script src="../-js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="../html/index.html">
+                <h2 class="head1"><img src="../jpg/logo.jpg" alt="" weight="70px" height="70px"></h2>
+            </a>
+
+            <ul class="drop-down-menu">
+                <li>
+                    <a class="0">
+                        <img class="place" src="../jpg/icon/place.png">
+                    </a>
+
+                    <br>
+
+                    <ul>
+                        <li>
+                            <a class="1" href="../html/tokyo.html">東京都</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/saitama.html">埼玉縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/shizuoka.html">靜岡縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/hyogo.html">兵庫縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/tottori.html">鳥取縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/kanagawa.html">神奈川縣</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div id="banner" class="banner" onclick="jumpToCart()">
+                <img class="shop" src="../jpg/icon/cart.png">
+            </div>
+
+            <div id="fav" class="fav" onclick="jumpToFavor()">
+                <img class="favor" src="../jpg/icon/favor.png">
+            </div>
+
+        </div>
+
+        <br>
+
+        <br><br>
+
+        <script>
+            var favorSetArray = JSON.parse(localStorage.getItem("favorStorage"));
+            var favorSet = new Set(favorSetArray);
+
+            for (item of favorSet) {
+                var arr = item.split(" ");
+                var museum = arr[0];
+                var link = arr[1];
+                console.log(item);
+                document.writeln("<div class=\"heart\">");
+                document.writeln("<div class=\"fav_item\">");
+                document.writeln("<div class=\"not_fav\">");
+                document.writeln("<button class=\"fav_cancel\" value=\"" + item + "\">刪除</button>");
+                document.writeln("</div>");
+                document.writeln("<a class=\"fav_museum\" href=\"" + link + "\">" + museum + "</a>");
+                document.writeln("</div>");
+                document.writeln("</div>");
+            }
+
+            $(".fav_cancel").on("click", function () {
+                var buttonValue = $(this).val();
+                var arr = buttonValue.split(" ");
+                var museum = arr[0];
+                alert("已從收藏中移除「" + museum + "」");
+                var favorSetArray = JSON.parse(localStorage.getItem("favorStorage"));
+                var favorSet = new Set(favorSetArray);
+                favorSet.delete(buttonValue);
+                favorSetArray = Array.from(favorSet);
+                localStorage.setItem("favorStorage", JSON.stringify(favorSetArray));
+                location.reload();
+            });
+        </script>
+        <br>
+
+        <div id="footer">
+            <a href="contact.html">
+                <h2 class="footer1">聯絡我們</h2>
+            </a>
+            <a href="https://www.instagram.com/butterfly_music11018/">
+                <h2 class="footer"><img src="../jpg/insta.png" width="50px" height="50px"></h2>
+            </a>
+            <a href="https://www.facebook.com/butterflymusic11018/">
+                <h2 class="footer"><img src="../jpg/facebook.png" width="50px" height="50px"></h2>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

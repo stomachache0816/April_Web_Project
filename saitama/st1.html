@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蠟筆小新館</title>
+    <link rel="stylesheet" href="../css/museum.css">
+    <script src="../-js/jquery.min.js"></script>
+    <script src="../bootstrap-4/js/bootstrap.min.js"></script>
+    <script src="../-js/script.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="../html/index.html">
+                <h2 class="head1"><img src="../jpg/logo.jpg" alt="" weight="70px" height="70px"></h2>
+            </a>
+
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="#">
+                        <img class="place" src="../jpg/icon/place.png">
+                    </a>
+
+                    <br>
+
+                    <ul>
+                        <li>
+                            <a class="1" href="../html/tokyo.html">東京都</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/saitama.html">埼玉縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/shizuoka.html">靜岡縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/hyogo.html">兵庫縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/tottori.html">鳥取縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/kanagawa.html">神奈川縣</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div id="banner" class="banner" onclick="jumpToCart()">
+                <img class="shop" src="../jpg/icon/cart.png">
+            </div>
+
+            <div id="fav" class="fav" onclick="jumpToFavor()">
+                <img class="favor" src="../jpg/icon/favor.png">
+            </div>
+
+        </div>
+
+        <br>
+
+        <img id="tkpic" src="../jpg/museum/st1.jpg">
+
+        <h1 class="museum_name">蠟筆小新館</h1>
+
+        <div class="about">
+            <h1>About</h1>
+            <p>距離東京市中心約1小時多車程的埼玉春日部市為蠟筆小新的背景，是其漫畫家臼井儀人的成長之地，而這裡也有個規模不算大的蠟筆小新館。
+                館內裡有不少小新、不理不理左衛門、野原一家的擺設，還有他們的拓印，小新迷可在這裡入手一些周邊商品。此外，這個小新館內有一些主題遊玩設施，可帶同小孩前來玩耍！</p>
+        </div>
+
+        <div class="infro">
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/location.png">
+                <p>埼玉縣春日部市南1-1-1　LaLa garden春日部3F</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/clock.png">
+                <p>10:00-20:00</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/train.png">
+                <p>1. 從新宿站搭乘JR的埼京線[快速](川越行) / 湘南新宿ライン[各停](宇都宮行) 到大宮駅，轉東武鐵路的東武野田線[各停](柏行)，到春日部駅下車</p>
+                <p>2. 從新宿站搭乘metro的丸ノ内線(池袋行)到大手町駅轉乘半蔵門線[急行](久喜行)，到春日部駅下車</p>
+            </div>
+
+        </div>
+
+        <div class="buy_ticket">
+            <div id="already_buy" class="already_buy"><strong>購票</strong></div>
+        </div>
+
+        <div class="ticket">
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/age.png" />
+                <div class="ticket_text">全年齡層</div>
+                <div class="ticket_price">0日幣</div>
+                <button class="ticket_shop" id="ticket-byn-1" value="蠟筆小新館 全年齡層 0">加入購物車</button>
+                
+            </div>
+
+        </div>
+
+        <div class="add_fav">
+            <button class="added" value="蠟筆小新館 ../saitama/st1.html">喜歡就收藏</button>
+        </div>
+        <script src="../-js/addButton.js"></script>
+        <br><br>
+
+        <br><br><br><br><br><br>
+
+        <div id="footer">
+            <a href="contact.html">
+                <h2 class="footer1">聯絡我們</h2>
+            </a>
+            <a href="https://www.instagram.com/butterfly_music11018/">
+                <h2 class="footer"><img src="../jpg/insta.png" width="50px" height="50px"></h2>
+            </a>
+            <a href="https://www.facebook.com/butterflymusic11018/">
+                <h2 class="footer"><img src="../jpg/facebook.png" width="50px" height="50px"></h2>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+#container {
+    background-color: rgb(243, 234, 230);
+}
+
+#header {  
+    display: flex;
+    color: rgb(101, 96, 119);
+    letter-spacing: 2px;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 1px;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.head {
+    color: rgb(101, 96, 119);
+}
+
+.head1 {
+    margin-top: 5px;
+    padding-right: 20px;
+    padding-left: 50px;
+}
+
+#content {
+    width: auto;
+    height: 400px;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  background-color: rgb(101, 96, 119);
+}
+
+.footer {
+  padding-left: 20px;
+  height: 100px;
+  padding-top: 90px;
+}
+
+#footer1 {
+  display: flex;
+  justify-content: center;
+}
+
+.footer1 {
+  padding-right: 15px;
+  height: 100px;
+  padding-top: 100px;
+  color: rgb(243, 234, 230);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul.drop-down-menu {
+    display: inline-block;
+  }
+  
+  ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  ul.drop-down-menu>li:last-child {
+    border-right: none;
+  }
+  
+  ul.drop-down-menu>li {
+    float: left;
+  }
+  
+  ul.drop-down-menu a {
+    background-color: rgb(243, 234, 230);
+    color: rgb(101, 96, 119);
+    display: block;
+    min-width: 80px;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+  }
+
+  ul.drop-down-menu a:hover {
+    background-color: rgb(121, 115, 141);
+    color: rgb(243, 234, 230);
+  }
+  
+  ul.drop-down-menu li:hover>a {
+    background-color: rgb(121, 115, 141);
+    color: rgb(243, 234, 230);
+  }
+
+  ul.drop-down-menu ul li {
+    border-bottom: rgb(121, 115, 141) 1px solid;
+  }
+  
+  ul.drop-down-menu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  ul.drop-down-menu ul {
+    display: none;
+  }
+  
+  ul.drop-down-menu li:hover>ul {
+    display: block;
+  }
+  
+  ul.drop-down-menu ul {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    min-width: 80px;
+  }
+
+  .shop{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .banner {
+    display: flex;
+    float: right;
+    padding-top: 13px;
+    padding-left:3%;
+  }
+  
+  .favor{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .fav{
+    padding-top: 13px;
+    padding-left: 6%;
+  }
+
+  .place{
+    align-items: center;
+    padding-top: 13px;
+    width: 50px;
+    height: 50px;
+  }
+
+
+
+
+  .city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+  
+  .city_item {
+    margin: 10px;
+    background-color: rgb(243, 234, 230);
+    color: rgb(101, 96, 119);
+    overflow: auto;
+    width: 340px;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  .city_item:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .city_img{
+    width: 300px;
+    height: 250px;
+    padding-left: 20px;
+    padding-top: 20px;
+    align-items: center;
+  }
+  
+  .city_text {
+    font-size: 35px;
+    padding-top: 10px;
+    text-align: center;
+    padding: 5%;
+    color: rgb(101, 96, 119);
+  }
+
+  .city_text1 {
+    font-size: 35px;
+    padding-top: 10px;
+    text-align: center;
+    padding: 5%;
+    color: rgb(101, 96, 119);
+  }
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  

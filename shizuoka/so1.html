@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>櫻桃小丸子樂園</title>
+    <link rel="stylesheet" href="../css/museum.css">
+    <script src="../-js/jquery.min.js"></script>
+    <script src="../bootstrap-4/js/bootstrap.min.js"></script>
+    <script src="../-js/script.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="../html/index.html">
+                <h2 class="head1"><img src="../jpg/logo.jpg" alt="" weight="70px" height="70px"></h2>
+            </a>
+
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="#">
+                        <img class="place" src="../jpg/icon/place.png">
+                    </a>
+
+                    <br>
+
+                    <ul>
+                        <li>
+                            <a class="1" href="../html/tokyo.html">東京都</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/saitama.html">埼玉縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/shizuoka.html">靜岡縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/hyogo.html">兵庫縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/tottori.html">鳥取縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/kanagawa.html">神奈川縣</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div id="banner" class="banner" onclick="jumpToCart()">
+                <img class="shop" src="../jpg/icon/cart.png">
+            </div>
+
+            <div id="fav" class="fav" onclick="jumpToFavor()">
+                <img class="favor" src="../jpg/icon/favor.png">
+            </div>
+
+        </div>
+
+        <br>
+
+        <img id="tkpic" src="../jpg/museum/so1.jpg">
+
+                <h1 class="museum_name">櫻桃小丸子樂園</h1>
+
+                <div class="about">
+                    <h1>About</h1>
+                    <p>靜岡清水是櫻桃小丸子的取景地，因此又被稱為是小丸子的故鄉，來到靜岡縣可以來造訪當地的櫻桃小丸子樂園。樂園位在清水港旁邊的百貨商場S-Pulse dream
+                        plaza裡，館內忠實再現小丸子的家，包括媽媽的廚房，爸爸常待的客廳，小丸子與姐姐的房間，奶奶的房間等等，同時還有小丸子與同學們上課所在的教室，以及放學後玩樂的公園，每一處都忠實呈現，還有可愛的角色人物公仔設置在各處，讓人能拍得過癮。
+                    </p>
+                </div>
+
+                <div class="infro">
+
+                    <div class="infro1"><img id="icon" src="../jpg/icon/location.png">
+                        <p>静岡縣静岡市清水区入船町13-15</p>
+                    </div>
+
+                    <div class="infro1"><img id="icon" src="../jpg/icon/clock.png">
+                        <p>10:00-20:00</p>
+                    </div>
+
+                    <div class="infro1"><img id="icon" src="../jpg/icon/train.png">
+                        <p>1. 從JR東京站搭乘新幹線至靜岡站，再轉乘JR東海道本線至清水站</p>
+                        <p>2. 免費接駁巴士於JR清水站Minato口（東口）或靜鐵新清水站搭乘，方向為JR清水站→靜鐵新清水站→S-PULSE DREAM PLAZA→JR清水站，由JR清水站至S-PULSE
+                            DREAM PLAZA約需10分鐘</p>
+                    </div>
+
+                </div>
+
+                <div class="buy_ticket">
+                    <div id="already_buy" class="already_buy"><strong>購票</strong></div>
+                </div>
+
+                <div class="ticket">
+
+                    <div class="ticket_item">
+                        <img class="ticket_img" src="../jpg/icon/boy.png" />
+                        <div class="ticket_text">3歲-小學生</div>
+                        <div class="ticket_price">700日幣</div>
+                        <button class="ticket_shop" id="ticket-byn-1" value="櫻桃小丸子樂園 3歲-小學生 700">加入購物車</button>
+                    </div>
+
+                    <div class="ticket_item">
+                        <img class="ticket_img" src="../jpg/icon/teen.png" />
+                        <div class="ticket_text">國中生以上</div>
+                        <div class="ticket_price">1000日幣</div>
+                        <button class="ticket_shop" id="ticket-byn-1" value="櫻桃小丸子樂園 國中生以上 1000">加入購物車</button>
+                    </div>
+
+                </div>
+
+                <div class="add_fav">
+                    <button class="added" value="櫻桃小丸子樂園 ../shizuoka/so1.html">喜歡就收藏</button>
+                </div>
+                <script src="../-js/addButton.js"></script>
+                <br><br>
+
+                <br><br><br><br><br><br>
+
+                <div id="footer">
+                    <a href="contact.html">
+                        <h2 class="footer1">聯絡我們</h2>
+                    </a>
+                    <a href="https://www.instagram.com/butterfly_music11018/">
+                        <h2 class="footer"><img src="../jpg/insta.png" width="50px" height="50px"></h2>
+                    </a>
+                    <a href="https://www.facebook.com/butterflymusic11018/">
+                        <h2 class="footer"><img src="../jpg/facebook.png" width="50px" height="50px"></h2>
+                    </a>
+                </div>
+
+            </div>
+</body>
+
+
+</html>

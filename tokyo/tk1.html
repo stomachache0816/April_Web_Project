@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三鷹之森吉卜力美術館</title>
+    <link rel="stylesheet" href="../css/museum.css">
+    <script src="../-js/jquery.min.js"></script>
+    <script src="../bootstrap-4/js/bootstrap.min.js"></script>
+    <script src="../-js/script.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="../html/index.html">
+                <h2 class="head1"><img src="../jpg/logo.jpg" alt="" weight="70px" height="70px"></h2>
+            </a>
+
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="#">
+                        <img class="place" src="../jpg/icon/place.png">
+                    </a>
+
+                    <br>
+
+                    <ul>
+                        <li>
+                            <a class="1" href="../html/tokyo.html">東京都</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/saitama.html">埼玉縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/shizuoka.html">靜岡縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/hyogo.html">兵庫縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/tottori.html">鳥取縣</a>
+                        </li>
+                        <li>
+                            <a class="1" href="../html/kanagawa.html">神奈川縣</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div id="banner" class="banner" onclick="jumpToCart()">
+                <img class="shop" src="../jpg/icon/cart.png">
+            </div>
+
+            <div id="fav" class="fav" onclick="jumpToFavor()">
+                <img class="favor" src="../jpg/icon/favor.png">
+            </div>
+
+        </div>
+
+        <br>
+
+        <img id="tkpic" src="../jpg/museum/tk1.jpg">
+
+        <h1 class="museum_name">三鷹之森吉卜力美術館</h1>
+
+        <div class="about">
+            <h1>About</h1>
+            <p>位於東京吉祥寺的三鷹之森吉卜力美術館，由動畫大師宮崎駿親手設計打造並擔任館長，美術館內不僅有宮崎駿筆下的故事，還有他創作故事背後下自己的故事！宮崎駿在動畫上，創作出許多膾炙人口的動畫電影，陪伴著你我的兒時回憶。跟著三鷹之森吉卜力美術館，一起走進宮崎駿的奇幻創作世界！
+            </p>
+        </div>
+
+        <div class="infro">
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/location.png">
+                <p>東京都三鷹市下連雀一丁目1番83號</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/clock.png">
+                <p>10:00-18:00</p>
+                <p>遊客需在門票上指定的日期及時間段內入場，每天有4個入場批次，分別為10:00-10:30、12:00-12:30、14:00-14:30、16:00-16:30</p>
+                <p>公休日: 週二，有時也會不定期休館</p>
+            </div>
+
+            <div class="infro1"><img id="icon" src="../jpg/icon/train.png">
+                <p>1. 搭JR中央線到「三鷹站」，從車站南口出來會看到往三鷹之森吉卜力美術館接駁車站牌，搭車7~8分抵達，自己走路過去約15分鐘，可以自行考量</p>
+                <p>2. 搭JR中央線到「吉祥寺站」，然後步行穿越井之頭恩賜公園，沿途跟著往三鷹吉卜力美術館的指標走即可</p>
+            </div>
+
+        </div>
+
+        <div class="buy_ticket">
+            <div id="already_buy" class="already_buy"><strong>購票</strong></div>
+        </div>
+
+        <div class="ticket">
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/baby.png" />
+                <div class="ticket_text">3歲以下</div>
+                <div class="ticket_price">0日幣</div>
+                <button class="ticket_shop" id="ticket-byn-1" value="三鷹之森吉卜力美術館 3歲以下 0">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/boy.png" />
+                <div class="ticket_text">4-6歲</div>
+                <div class="ticket_price">100日幣</div>
+                <button class="ticket_shop" id="ticket-byn-2" value="三鷹之森吉卜力美術館 4-6歲 100">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/kid.png" />
+                <div class="ticket_text">7-12歲</div>
+                <div class="ticket_price">400日幣</div>
+                <button class="ticket_shop" id="ticket-byn-3" value="三鷹之森吉卜力美術館 7-12歲 400">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/teen.png" />
+                <div class="ticket_text">13-18歲</div>
+                <div class="ticket_price">700日幣</div>
+                <button class="ticket_shop" id="ticket-byn-4" value="三鷹之森吉卜力美術館 13-18歲 700">加入購物車</button>
+            </div>
+
+            <div class="ticket_item">
+                <img class="ticket_img" src="../jpg/icon/adult.png" />
+                <div class="ticket_text">19歲以上</div>
+                <div class="ticket_price">1000日幣</div>
+                <button class="ticket_shop" id="ticket-byn-5" value="三鷹之森吉卜力美術館 19歲以上 1000">加入購物車</button>
+            </div>
+
+        </div>
+
+        <div class="add_fav">
+            <button class="added" value="三鷹之森吉卜力美術館 ../tokyo/tk1.html">喜歡就收藏</button>
+        </div>
+        <script src="../-js/addButton.js"></script>
+
+        <br><br>
+
+        <br><br><br><br><br><br>
+
+        <div id="footer">
+            <a href="contact.html">
+                <h2 class="footer1">聯絡我們</h2>
+            </a>
+            <a href="https://www.instagram.com/butterfly_music11018/">
+                <h2 class="footer"><img src="../jpg/insta.png" width="50px" height="50px"></h2>
+            </a>
+            <a href="https://www.facebook.com/butterflymusic11018/">
+                <h2 class="footer"><img src="../jpg/facebook.png" width="50px" height="50px"></h2>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>
